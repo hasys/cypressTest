@@ -28,6 +28,8 @@ describe('My First Test', function() {
 		cy.get('div h3').contains('Business Process').click()
 
 		cy.get('input#fileName').type('process')
+		cy.get('div#packageSelectContainer').click()
+		cy.get('div#packageSelectContainer li>a').contains('com').click()
 		cy.get('div.modal-dialog button.btn-primary').click()
 
 		cy.get('i.fa-eye').click()
@@ -36,7 +38,7 @@ describe('My First Test', function() {
 
 		cy.get('button').contains('Save').click()
 
-		cy.get('a').contains('testadmin').click()
+		cy.get('a').contains('admin').click()
 		cy.get('a').contains('Log Out').click()
 	})
 })
